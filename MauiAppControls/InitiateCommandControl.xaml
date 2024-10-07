@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppControls.InitiateCommandControl"
+             Title="InitiateCommandControl">
+    <VerticalStackLayout>
+        <SearchBar x:Name="searchBar"  BackgroundColor="White" TextColor="Black" SearchButtonPressed="searchBar_SearchButtonPressed"></SearchBar>
+
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem BackgroundColor="Green" Text="Favorite" Invoked="SwipeItem_Invoked"></SwipeItem>
+                    <SwipeItem BackgroundColor="Red" Text="Remove" Invoked="SwipeItem_Invoked1"></SwipeItem>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Label Text="Test swipe view" HeightRequest="60" HorizontalOptions="FillAndExpand" 
+                HorizontalTextAlignment="Center" BackgroundColor="Bisque"  ></Label>
+        </SwipeView>
+
+        <Button Text="Button 1"
+                Clicked="Button_Clicked"></Button>
+        <ImageButton Source="dotnet_bot.png"
+                Clicked="ImageButton_Clicked"></ImageButton>
+
+        <RadioButton Content="Grade A" Value="A" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+        <RadioButton Content="Grade B" Value="B" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+        <RadioButton Content="Grade C" Value="C" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+        <RadioButton Content="Grade D" Value="D" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+        <RadioButton Content="Grade F" Value="F" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+        <Label x:Name="selectedGradeLabel" Text="Grade" FontSize="Large" HorizontalTextAlignment="Center" ></Label>
+       
+    </VerticalStackLayout>
+</ContentPage>

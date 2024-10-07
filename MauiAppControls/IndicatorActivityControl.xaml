@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppControls.IndicatorActivityControl"
+             Title="IndicatorActivityControl">
+    <VerticalStackLayout>
+        <Label 
+            Text="Activity Indicator Example"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <ActivityIndicator x:Name="activityIndicator1" IsRunning="False" ></ActivityIndicator>
+        <Button x:Name="startButton" Text="Start" BackgroundColor="Green" Clicked="startButton_Clicked"></Button>
+        <Button x:Name="stopButton" Text="Stop" BackgroundColor="Red" Clicked="stopButton_Clicked"></Button>
+
+        <Label Text="Progress bar example"></Label>
+        <ProgressBar x:Name="progressbar1" Margin="10" HeightRequest="10"  Progress="0"></ProgressBar>
+        <Button Text="Increase progress" Clicked="Button_Clicked" ></Button>
+
+    </VerticalStackLayout>
+</ContentPage>
